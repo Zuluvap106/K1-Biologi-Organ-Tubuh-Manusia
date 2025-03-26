@@ -1,0 +1,306 @@
+body {
+  background: linear-gradient(45deg, #ff9a9e, #fad0c4, #ffdde1);
+  background-size: 400% 400%;
+  animation: gradientMove 3s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* 🔝 Navbar */
+.navbar {
+  background: linear-gradient(to right, #ff758c, #ff7eb3);
+  color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  padding: 15px;
+  text-align: center;
+}
+
+.navbar {
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
+
+.menu a:hover {
+  color: #fbbf24;
+}
+
+.menu-btn {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+}
+
+
+#menu {
+  display: none; 
+  flex-direction: column;
+  gap: 10px;
+  background-color: white;
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#menu.hidden {
+  display: none; 
+}
+
+#menu.show {
+  display: flex; 
+}
+
+@media (min-width: 769px) {
+  #menu {
+    display: flex !important; 
+    position: static; 
+    flex-direction: row; 
+    gap: 20px;
+    background-color: transparent; 
+    box-shadow: none;
+  }
+}
+
+@media (max-width: 768px) {
+  #menu {
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    right: 0;
+    z-index: 50;
+  }
+}
+
+/* Dropdown menu */
+nav ul li.group:hover ul {
+  display: block;
+}
+
+nav ul li ul {
+  display: none;
+  position: absolute;
+  min-width: 150px;
+  z-index: 1000;
+}
+
+nav ul li ul li a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li ul li a:hover {
+  background-color: #ff69b4;
+}
+
+/* 👥 Profil Anggota */
+.developer-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.developer-card {
+  background: linear-gradient(120deg, #ffb6c1, #ff69b4);
+  padding: 15px;
+  text-align: center;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.developer-card:hover {
+  transform: scale(1.05);
+}
+
+.developer-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+/* 📚 Kotak Materi */
+.content-box {
+  padding: 20px;
+  text-align: center;
+  background: white;
+  border-radius: 10px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 🎓 Tombol Materi */
+.btn {
+  background-color: #ff69b4;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: transform 0.2s, background 0.3s;
+}
+.btn:hover {
+  transform: scale(1.1);
+  background: linear-gradient(to right, #ff1493, #ff69b4);
+}
+/* 🏆 Footer */
+.footer {
+  background: linear-gradient(to right, #ff7eb3, #ffff);
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 10px;
+  margin-top: 0;
+}
+
+.falling-heart {
+  position: absolute;
+  top: -50px;
+  font-size: 1.5rem;
+  animation: fallHeart 5s linear infinite;
+}
+
+@keyframes fallHeart {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+.pink {
+  background-color: #ffff;
+}
+.pink p {
+  font-style: initial;
+  text-align: justify;
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  .navbar {
+    padding: 10px;
+  }
+
+  #menu {
+    padding: 8px;
+  }
+
+  .developer-card {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .content-box {
+    padding: 15px;
+  }
+
+  .btn {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  .navbar {
+    padding: 12px;
+  }
+
+  #menu {
+    padding: 10px;
+  }
+
+  .developer-card {
+    width: 45%;
+    padding: 12px;
+  }
+
+  .content-box {
+    padding: 20px;
+  }
+
+  .btn {
+    padding: 10px 18px;
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 769px) {
+  body {
+    font-size: 18px;
+  }
+
+  .navbar {
+    padding: 15px;
+  }
+
+  .developer-card {
+    width: 22%;
+    padding: 15px;
+  }
+
+  .content-box {
+    padding: 25px;
+  }
+
+  .btn {
+    padding: 12px 20px;
+    font-size: 16px;
+  }
+}
