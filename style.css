@@ -78,9 +78,8 @@ body {
   }
 }
 
-
 #menu {
-  display: none; 
+  display: none;
   flex-direction: column;
   gap: 10px;
   background-color: white;
@@ -89,20 +88,20 @@ body {
 }
 
 #menu.hidden {
-  display: none; 
+  display: none;
 }
 
 #menu.show {
-  display: flex; 
+  display: flex;
 }
 
 @media (min-width: 769px) {
   #menu {
-    display: flex !important; 
-    position: static; 
-    flex-direction: row; 
+    display: flex !important;
+    position: static;
+    flex-direction: row;
     gap: 20px;
-    background-color: transparent; 
+    background-color: transparent;
     box-shadow: none;
   }
 }
@@ -110,7 +109,7 @@ body {
 @media (max-width: 768px) {
   #menu {
     position: absolute;
-    top: 100%; 
+    top: 100%;
     left: 0;
     right: 0;
     z-index: 50;
@@ -302,5 +301,37 @@ nav ul li ul li a:hover {
   .btn {
     padding: 12px 20px;
     font-size: 16px;
+  }
+  #contact {
+    background: #fde2e4;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  #contact h2 {
+    color: #d63384;
+    font-size: 24px;
+  }
+  #contact p {
+    color: #555;
+    margin-bottom: 10px;
+  }
+  #contact input,
+  #contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  #contact button {
+    background: #d63384;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  #contact button:hover {
+    background: #c2185b;
   }
 }
